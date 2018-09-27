@@ -11,11 +11,11 @@ import { WeatherService } from '../weather/weather.service';
 export class CurrentWeatherComponent implements OnInit {
   current: ICurrentWeather;
   constructor(private weatherService: WeatherService) {
-  
+
    }
 
   ngOnInit() {
-    this.weatherService.getCurrentWeather('Bethesda', 'US')
+    this.weatherService.getCurrentWeather('Louisville', 'US')
     .subscribe((data) => this.current = data)
   }
 
